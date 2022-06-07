@@ -14,9 +14,10 @@ class SevenDisplay(object):
         if (rest==0):
             self.stack.push(checkDigit(rest % modulo))
         else:
-            while rest != 0 :
-                self.stack.push(checkDigit(rest % modulo))
-                rest = rest // modulo
+            if (rest > 0):## Not permit negative value
+                while rest != 0 :
+                    self.stack.push(checkDigit(rest % modulo))
+                    rest = rest // modulo
 
     def printDigitalNumber(self):
 

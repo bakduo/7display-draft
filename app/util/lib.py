@@ -1,28 +1,23 @@
 ##Source https://www.geeksforgeeks.org/print-numbers-digital-form/
+
+##Modify for works with string without print
 def prints(mat):     
     # If in matrix row number is even then
     # prints "-" otherwise prints "|"
     queue = []
-
     for i in range(5):
         for j in range(5):
-     
             if (i % 2 == 0):
                 if (mat[i][j] == 1):
-                   #print('', end = '-')
                    queue.append('-')
                 else:
-                    #print('', end = ' ')
                     queue.append(' ')
             else:
                 if (mat[i][j] == 1):
-                    #print('', end = '|')
                     queue.append('|')
-                else:
-                    #print('', end = ' ')
+                else:                   
                     queue.append(' ')
  
-        #print()
         queue.append('\n')
     
     return queue
@@ -192,3 +187,4 @@ def checkDigit(num):
        return digit9()
   
 # This code is contributed by rutvik_56
+# And modify by bakduo 06-2022
