@@ -5,16 +5,18 @@ class SevenDisplay(object):
     
     def __init__(self,list_of_number):
         super()
-        self.number_str = int(list_of_number)
+        self.number_str = list_of_number
         self.stack = StackUsingArray()
     
     def generateSevenNumber(self):
         modulo = 10
         rest = self.number_str
-        while rest != 0 :
-            value = checkDigit(rest % modulo)
-            self.stack.push(value)
-            rest = rest // modulo
+        if (rest==0):
+            self.stack.push(checkDigit(rest % modulo))
+        else:
+            while rest != 0 :
+                self.stack.push(checkDigit(rest % modulo))
+                rest = rest // modulo
 
     def printDigitalNumber(self):
 
